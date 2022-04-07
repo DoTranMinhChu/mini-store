@@ -3,6 +3,8 @@ import NavigationHeader from '../components/navigation/NavigationHeader';
 import TaskBar from '../components/navigation/TaskBar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Body from '../components/body/Body';
+import Home from './home/Home';
+import Cart from './cart/Cart';
 
 function App() {
   return (
@@ -12,8 +14,8 @@ function App() {
         <TaskBar />
         <Body>
           <Routes>
-            <Route path="/" element={<div>Main page</div>}></Route>
-            <Route path="cart" element={<div>Main page</div>}></Route>
+            <Route path="/" element={<Home/>}></Route>
+            <Route path="cart" element={<Cart/>}></Route>
             <Route path="info" element={<div>Main page</div>}></Route>
           </Routes>
         </Body>

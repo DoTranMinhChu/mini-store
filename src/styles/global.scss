@@ -13,21 +13,15 @@ $res_992 : "only screen and (min-width: 992px) and (max-width: 1023px)";
 $res_1024 : "only screen and (min-width: 1024px) and (max-width: 1999px)";
 $res_1200 : "only screen and (min-width: 1200px)";
 
-$height_nav_header : 12vh;
+$height_nav_header : 100px;
 $width_task_bar : 230px;
-$light_color_grey: rgb(238, 238, 238);
-$light_color_yellow:rgb(251, 226, 113);
-$light_color_white:rgb(255, 255, 255);
-$light_color_black : rgba(37, 37, 37, 0.889);
-$light_color_green:rgb(145, 196, 131);
-$light_color_red:rgb(255, 100, 100);
 
-$dark_color_grey: rgb(99, 98, 98);
-$dark_color_yellow:rgb(253, 219, 66);
-$dark_color_white:rgb(244, 240, 207);
-$dark_color_black : rgb(0, 0, 0);
-$dark_color_green:rgb(69, 129, 55);
-$dark_color_red:rgb(255, 31, 31);
+$main_color: black;
+$main_light_color : rgba(59, 59, 59, 0.9);
+$opposite_color: white;
+$main_color_background : rgb(241, 240, 241);
+$color_shadow_nav: rgba(255, 255, 255, 0.286);
+$background-image: linear-gradient(45deg, rgb(241, 240, 241) 0%, rgb(247, 245, 245) 100%);
 
 
 @mixin responsive_320() {
@@ -72,18 +66,46 @@ $dark_color_red:rgb(255, 31, 31);
     }
 }
 
-
-
-
-.container {
-
-    min-height: 100vh;
-    background-color: $dark_color_white;
+body {
+    background-color: #FBAB7E;
+    background-image: $background-image;
+    // background-color: $main_color_background;
 }
 
+.circle {
+    border-radius: 50%;
+    overflow: hidden;
+}
 
+.img-responsive {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
+.container {
+    margin-top: 100px;
+    min-height: 100vh;
+    padding: 100px;
+}
 
+.list-product {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.cart {
+    display: flex;
+
+    &__cart-list {
+        width: 60%;
+    }
+    &__checkout {
+        width: 40%;
+    }
+}
 
 @include responsive_320 {
     .container {}
@@ -116,7 +138,8 @@ $dark_color_red:rgb(255, 31, 31);
 
 @include responsive_1200 {
     .container {
-        margin: 0 $width_task_bar;
+        margin-left: $width_task_bar;
+        margin-right: $width_task_bar;
         width: calc(100vw - 2*$width_task_bar);
     }
 }
