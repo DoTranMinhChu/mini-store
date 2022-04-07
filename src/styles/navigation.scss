@@ -1,0 +1,146 @@
+$height_nav_header : 12vh;
+$width_task_bar : 230px;
+$light_color_grey: rgb(238, 238, 238);
+$light_color_yellow:rgb(251, 226, 113);
+$light_color_white:rgb(255, 255, 255);
+$light_color_black : rgba(37, 37, 37, 0.889);
+$light_color_green:rgb(145, 196, 131);
+$light_color_red:rgb(255, 100, 100);
+
+$dark_color_grey: rgb(99, 98, 98);
+$dark_color_yellow:rgb(253, 219, 66);
+$dark_color_white:rgb(244, 240, 207);
+$dark_color_black : rgb(0, 0, 0);
+$dark_color_green:rgb(69, 129, 55);
+$dark_color_red:rgb(255, 31, 31);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navigation-box {
+    height: 12vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid $light_color_grey;
+    position: fixed;
+    z-index: 1000;
+    background-color: $light_color_white;
+
+    .logo-box {
+        font-family: cursive;
+        font-size: 2.5em;
+        font-weight: 600;
+        margin: 18px 64px;
+
+        &__logo {
+            color: black;
+            text-decoration: none;
+
+        }
+    }
+
+    .user-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        height: 100%;
+
+        &__avatar-box {
+            width: 50px;
+            height: 50px;
+            margin: 18px;
+            border: 1px solid $light_color_grey;
+        }
+
+        &__button--login {
+            font-size: 1.2em;
+            font-weight: 600;
+            width: 124px;
+            height: 42px;
+            color: $light_color_grey;
+            background-color: $dark_color_green;
+            border: 2px solid $light_color_grey;
+            border-radius: 36px;
+        }
+
+        &__button--login:hover {
+            color: $dark_color_grey;
+            background-color: $light_color_green;
+            border: 2px solid $dark_color_grey;
+        }
+    }
+}
+
+
+.taskbar-box {
+    background-color: $light_color_white;
+    width: $width_task_bar;
+    border-right: 1px solid $light_color_grey;
+    top: 12vh;
+    bottom: 0;
+    position: fixed;
+    z-index: 10;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-around;
+        height: 100%;
+        width: 100%;
+        padding: 24px;
+
+        .task-bar-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: $dark_color_black;
+
+            text-decoration: none;
+
+            margin: auto;
+            border-radius: 40px;
+            width: 150px;
+            height: 150px;
+
+            &--active {
+                color: $dark_color_grey;
+                background-color: $dark_color_yellow;
+            }
+
+            &__icon {
+                padding: 8px;
+                font-size: 2em;
+                font-weight: 700;
+            }
+
+        }
+
+        .task-bar-item:hover {
+            color: $dark_color_black;
+            background-color: $light_color_yellow
+        }
+
+        .task-bar-item:focus {
+            color: $dark_color_grey;
+            background-color: $dark_color_yellow;
+        }
+    }
+}
+
+.circle {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.img-responive {
+    width: 100%;
+    height: 100%;
+}

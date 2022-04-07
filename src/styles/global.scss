@@ -1,0 +1,122 @@
+// max-width: 320px (điện thoại di động, hiển thị chiều dọc)
+// max-width: 480px (điện thoại di động, hiển thị chiều ngang)
+// max-width: 600px (máy tính bảng, hiển thị chiều dọc)
+// max-width: 800px (máy tính bảng, hiển thị chiều ngang)
+// max-width: 768px (máy tính bảng loại to, hiển thị chiều dọc)
+// max-width: 1024px (máy tính bảng loại to, hiển thị chiều ngang)
+// min-width: 1025px (từ size này trở lên là danh cho desktop thông thường).
+$res_320 : "only screen and (min-width: 320px) and (max-width: 374px)";
+$res_375 : "only screen and (min-width: 375px) and (max-width: 424px)";
+$res_425 : "only screen and (min-width: 425px) and (max-width: 767px)";
+$res_768 : "only screen and (min-width: 768px) and (max-width: 991px)";
+$res_992 : "only screen and (min-width: 992px) and (max-width: 1023px)";
+$res_1024 : "only screen and (min-width: 1024px) and (max-width: 1999px)";
+$res_1200 : "only screen and (min-width: 1200px)";
+
+$height_nav_header : 12vh;
+$width_task_bar : 230px;
+$light_color_grey: rgb(238, 238, 238);
+$light_color_yellow:rgb(251, 226, 113);
+$light_color_white:rgb(255, 255, 255);
+$light_color_black : rgba(37, 37, 37, 0.889);
+$light_color_green:rgb(145, 196, 131);
+$light_color_red:rgb(255, 100, 100);
+
+$dark_color_grey: rgb(99, 98, 98);
+$dark_color_yellow:rgb(253, 219, 66);
+$dark_color_white:rgb(244, 240, 207);
+$dark_color_black : rgb(0, 0, 0);
+$dark_color_green:rgb(69, 129, 55);
+$dark_color_red:rgb(255, 31, 31);
+
+
+@mixin responsive_320() {
+    @media #{$res_320} {
+        @content;
+    }
+}
+
+@mixin responsive_375() {
+    @media #{$res_375} {
+        @content;
+    }
+}
+
+@mixin responsive_425() {
+    @media #{$res_425} {
+        @content;
+    }
+}
+
+@mixin responsive_768() {
+    @media #{$res_768} {
+        @content;
+    }
+}
+
+@mixin responsive_992() {
+    @media #{$res_992} {
+        @content;
+    }
+}
+
+@mixin responsive_1024() {
+    @media #{$res_1024} {
+        @content;
+    }
+}
+
+@mixin responsive_1200() {
+    @media #{$res_1200} {
+        @content;
+    }
+}
+
+
+
+
+.container {
+
+    min-height: 100vh;
+    background-color: $dark_color_white;
+}
+
+
+
+
+
+@include responsive_320 {
+    .container {}
+}
+
+@include responsive_375 {
+    .container {}
+
+
+}
+
+@include responsive_425 {
+    .container {}
+}
+
+@include responsive_768 {
+    .container {}
+
+}
+
+@include responsive_992 {
+    .container {}
+
+}
+
+@include responsive_1024 {
+    .container {}
+
+}
+
+@include responsive_1200 {
+    .container {
+        margin: 0 $width_task_bar;
+        width: calc(100vw - 2*$width_task_bar);
+    }
+}
