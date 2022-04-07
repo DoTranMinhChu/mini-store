@@ -4,13 +4,18 @@ import { StrictMode } from "react";
 import './index.css';
 import App from './views/App';
 import reportWebVitals from './reportWebVitals';
-
+import { createStore } from 'redux';
+import rootReducer from './stores/reducers/rootReducer'
+import { Provider } from 'react-redux';
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
-
+const reduxReact = createStore(rootReducer);
 root.render(
   <StrictMode>
-    <App />
+    <Provider store={reduxReact}>
+      <App />
+    </Provider>
+
   </StrictMode>
 );
 

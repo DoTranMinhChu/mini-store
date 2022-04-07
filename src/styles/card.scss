@@ -7,25 +7,24 @@ $color_shadow_card: rgba(154, 154, 154, 0.44);
 .card-product {
     transition: 0.2s all;
     background-color: $main_color_background;
-    height: auto;
-    width: 264px;
+    height: 480px;
+    width: 270px;
     margin: 24px 4px;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 2px 2px 4px 4px $color_shadow_card;
 
-    &__content {
-        padding: 12px 8px;
-    }
-
     &__image-box {
-        padding: 8px 12px;
         height: 300px;
         width: auto;
     }
 
     &__infomation-box {
-        padding: 6px 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 16px 18px;
+        height: calc(480px - 300px);
     }
 
     &__infomation {
@@ -36,12 +35,14 @@ $color_shadow_card: rgba(154, 154, 154, 0.44);
     }
 
     &__product-name {
+        font-size: larger;
         padding: 4px 0;
     }
 
     &__product-type {
-        padding: 2px 1px;
-        font-weight: 500;
+        font-size: medium;
+        padding: 2px 4px;
+        font-weight: 400;
     }
 
     &__cart-box {
@@ -52,7 +53,7 @@ $color_shadow_card: rgba(154, 154, 154, 0.44);
     }
 
     &__product-price {
-        font-size: 40px;
+        font-size: 36px;
     }
 
     &__cart-buy {
@@ -191,7 +192,8 @@ $color_shadow_card: rgba(154, 154, 154, 0.44);
         justify-content: space-between;
         align-items: center;
     }
-    &__detail-box + &__detail-box {
+
+    &__detail-box+&__detail-box {
         border-top: 2px solid white;
     }
 
@@ -209,16 +211,17 @@ $color_shadow_card: rgba(154, 154, 154, 0.44);
         font-weight: 700;
         font-size: 22px;
 
-        &--quantily, &--unit {
+        &--quantily,
+        &--unit {
             font-weight: 500;
             font-size: 14px;
             color: $main_light_color;
             margin: 6px;
         }
-        
+
     }
 
-    &__btn{
+    &__btn {
         cursor: pointer;
         margin: 24px 0;
         width: 100%;
@@ -230,7 +233,7 @@ $color_shadow_card: rgba(154, 154, 154, 0.44);
         border-radius: 25px;
         border: 2px solid $main_color;
 
-        &:hover{
+        &:hover {
             background-color: $main_light_color;
         }
     }

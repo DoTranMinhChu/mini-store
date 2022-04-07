@@ -1,0 +1,113 @@
+{
+    "size": 12,
+    "data": [
+        {
+            "id": 1,
+            "name": "NUTRIENT RICH FACIAL MOISTURIZER",
+            "type": "SUPER GREENS",
+            "size": "4.23 fl oz / 125ml",
+            "infomation": "Do you feel like you need a super food smoothie for your skin? Our Nutrient Rich Facial Moisturizer is perfect for you! It is enriched with Super Greens extracts of Kale, Spirulina, Parsley and Chlorella to give your skin a nutrient boost to promote a radiant, glowing and healthy complexion. Antioxidant rich Acai, Goji Berry Extracts & Carrot Seed Oil known to fight free radicals and environmental stressors while also assisting in minimizing the appearance of fine lines. Hydrating Oils of Rosehip, Avocado and Jojoba lock moisture and nutrients into the skin.",
+            "price": 12.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Super_Greens_Nutrient_Rich_Facial_Moisturiser_125ml_01_Product_Base_720x.jpg?v=1599504594"
+        },
+        {
+            "id": 2,
+            "name": "ROSE HYDRATING MIST TONER",
+            "type": "SIGNATURE",
+            "size": "4.23 fl oz / 125ml",
+            "infomation": "..",
+            "price": 9.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Masterbrand_Rose_Mist_Toner_125ml_01_Product_720x.jpg?v=1599504649"
+        },
+        {
+            "id": 3,
+            "name": "HYDRATING MIST TONER",
+            "type": "SIGNATURE",
+            "size": "4.23 fl oz / 125ml",
+            "infomation": "Did you know that 1 Sukin Hydrating Mist Toner is sold every 40 seconds!? Yep- if you haven't tried it, you need to. Our alcohol-free Mist Toner blends Chamomile and Rosewater to help soothe, purify and cool your tired skin. And did we mention it is the ultimate multi use product? It can be used before and after cleansing, in the office as a 3pm pick me up, after makeup application to give you a dewy complexion or just anytime your skin is feeling stressed or overheated! TIP: Keep in the refrigerator to instantly refresh skin on hot days. It is also amazing at blending concealer under the eyes with a beauty sponge!",
+            "price": 9.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Signature_Hydrating_Mist_Toner_125ml_01_Product_1080x.jpg?v=1599504641"
+        },
+        {
+            "id": 4,
+            "name": "FACIAL MOISTURIZER PUMP",
+            "type": "SIGNATURE",
+            "size": "4.23 fl oz / 125ml",
+            "infomation": "Our Signature Facial Moisturizer is our most loved moisturizer and is the perfect all rounder! It is a hydrating cream, that nourishes and softens skin through a beautiful blend of Rosehip, Avocado, Sesame Seed and Jojoba Oils. Soothing Aloe Vera refreshes the skin, while Wheat Germ and Vitamin E assist with improving texture and protecting the skin’s moisture barrier. Your skin will be left feeling nourished, smooth and healthy. TIP: If your skin is feeling a little drier than normal, add in a few drops of your favorite oil into your moisturizer.",
+            "price": 9.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Signature_Facial_Moisturiser_125ml_01_Product_1080x.jpg?v=1599504612"
+        },
+        {
+            "id": 5,
+            "name": "FOAMING FACIAL CLEANSER PUMP",
+            "type": "SIGNATURE",
+            "size": "4.23 fl oz / 125ml",
+            "infomation": "Perfect for a normal to oily skin type, our Facial Foaming Cleanser is a non-drying, gentle gel cleanser that purifies the skin, without stripping it of its natural oils. Not only does it work to remove makeup, daily dirt build up and excess oils, it also helps to soothe and tighten the skin with a natural blend of Chamomile, Aloe Vera, Green Tea and Witch Hazel- win! Evening Primrose and our favorite Rosehip Oil is also added, to provide light hydration, leaving your skin soft and touchable!",
+            "price": 9.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Signature_Foaming_Facial_Cleanser_125ml_01_Product_1080x.jpg?v=1599504600"
+        },
+        {
+            "id": 6,
+            "name": "MICELLAR CLEANSING WATER",
+            "type": "SIGNATURE",
+            "size": "8.46 fl oz / 250ml",
+            "infomation": "We LOVE our Micellar Water- and so do you! It was voted the Best Micellar Water at the 2017 Beauty Heaven Best in Beauty Awards and there's no questioning why! Our Natural Micellar Water is infused with gentle ingredients such as Aloe Vera which help to remove makeup and dirt build up, while soothing and purifying your base. Chamomile and Cucumber also calms the skin leaving it lightly hydrated and clean. And did we mention the calming vanilla scent? Like a dream. TIP: Micellar Water can be left on skin, there is no need to wash it off! However many like to double cleanse- where they use Micellar Water first to remove makeup, and then follow with a cleanser.",
+            "price": 10.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Signature_Micellar_Cleansing_Water_250ml_01_Product_720x.jpg?v=1599504588"
+        },
+        {
+            "id": 7,
+            "name": "CREAM CLEANSER",
+            "type": "SIGNATURE",
+            "size": "4.23 fl oz / 125ml",
+            "infomation": "Dehydrated, flaky skin? Our Cream Cleanser will be your new best friend! Not only does it work to remove makeup, oil and dirt build up on the skin, it also nourishes your skin with a blend of natural oils including Rosehip, Avocado, Sesame and Wheat Germ Oils. An infusion of Aloe Vera, Cocoa Butter, Nettle and Horsetail leave the skin feeling soothed, purified and lightly hydrated. TIP: If you're struggling with dehydrated skin, follow with our Rosehip Oil or Hydration Elixir before you moisturize",
+            "price": 9.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Signature_Cream_Cleanser_125ml_01_Product_720x.jpg?v=1599504664"
+        },
+        {
+            "id": 8,
+            "name": "REVITALIZING FACIAL SCRUB",
+            "type": "SIGNATURE",
+            "size": "4.23 fl oz / 125ml",
+            "infomation": "Microbeads? No way! Our Revitalizing Facial Scrub is a cream based exfoliator therefore it is perfect for normal to drier skin types! It uses gentle granules of biodegradable Bamboo Extract and Walnut Shell Powder to lightly exfoliate the skin, removing unwanted dirt and impurities. A refreshing combination of Aloe Vera and Chamomile soothes the skin while Jojoba, Sesame and Rosehip Oils hydrate to leave your complexion silky soft and smooth! TIP: If your skin is super sensitive, add some Cream Cleanser to your scrub to soften the level of exfoliation.",
+            "price": 9.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Signature_Revitalising_Facial_Scrub_125ml_01_Product_720x.jpg?v=1599504656"
+        },
+        {
+            "id": 9,
+            "name": "HYDRATING FACE MASK",
+            "type": "SIGNATURE",
+            "size": "3.38 fl oz / 100ml",
+            "infomation": "Our Hydrating Facial Mask is a cream based mask, (and smells amazing!) from a rich blend of Mango Seed Butter, Avocado, Olive Fruit and Jojoba Oils. Your skin will feel nourished and super hydrated from the moisture restoring properties from the natural oils and butters. Enzymes from Papaya and Pineapple nourish the complexion and impart fruit acids and vitamins, leaving skin feeling smooth with a healthy glow! TIP: If your skin is feeling extra dehydrated, our Hydrating Face Mask can be used multiple times a week to give the skin the additional moisture it requires. Follow with a Facial Serum or Oil, then your moisturizer.",
+            "price": 12.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Signature_Hydrating_Facial_Masque_01_Product_2_720x.jpg?v=1599504579"
+        },
+        {
+            "id": 10,
+            "name": "eve.holt@reqres.in",
+            "type": "Eve",
+            "size": "Holt",
+            "infomation": "..",
+            "price": 1000,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Signature_Hydrating_Facial_Masque_01_Product_2_1080x.jpg?v=1599504579"
+        },
+        {
+            "id": 11,
+            "name": "ANTIOXIDANT EYE SERUM",
+            "type": "SIGNATURE",
+            "size": "1.01 fl oz / 30ml",
+            "infomation": "Did you know that fine lines around the eyes are some of the first signs of aging on the face? Fight the signs of premature aging with our fragrance free, Antioxidant Eye Serum! A blend of Plant Extracts including Aloe Vera, Cucumber and Burdock, rich in essential fatty acids offer light hydration to the delicate eye area, while oils from Rosehip, Evening Primrose and Borage help to fight the signs of aging, reduce the appearance of fine lines and improve the skin’s texture! TIP: Pump a pea sized drop of serum onto the tip of your finger and lightly pat around the eye bone and lid.",
+            "price": 15.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Signature_Antioxident_Eye_Serum_01_Product_720x.jpg?v=1599504580"
+        },
+        {
+            "id": 12,
+            "name": "MOISTURE RESTORING NIGHT CREAM",
+            "type": "SIGNATURE",
+            "size": "4.06 fl oz / 120ml",
+            "infomation": "Our Signature Moisture Restoring Night Cream is similar to our Facial Moisturizer, except it is infused with heavier natural oils to nourish and hydrate the skin while you sleep! This is through a super blend of oils and butters including Rosehip, Evening Primrose, Jojoba, Avocado & Shea Butter! Added Vitamin E and Borage, rich in essential fatty acids replenish the skin’s moisture levels improving the texture, leaving skin feeling soft and rejuvenated!",
+            "price": 1000,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Signature_Moisture_Restoring_Night_Cream_120ml_01_Product_2_720x.jpg?v=1599504662"
+        }
+    ]
+}
