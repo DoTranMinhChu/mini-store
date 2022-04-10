@@ -1,7 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { StrictMode } from "react";
-import './index.css';
 import App from './views/App';
 import reportWebVitals from './reportWebVitals';
 import { createStore } from 'redux';
@@ -15,7 +14,6 @@ root.render(
     <Provider store={reduxReact}>
       <App />
     </Provider>
-
   </StrictMode>
 );
 

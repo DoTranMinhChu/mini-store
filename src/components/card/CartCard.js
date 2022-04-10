@@ -2,28 +2,18 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlusCircle, faMinusCircle, faRemove } from '@fortawesome/free-solid-svg-icons'
 import '../../styles/card.scss'
-import { connect } from "react-redux";
+
 class CartCard extends React.Component {
     state = {
-        product : this.props.product
+        product: this.props.product
     }
     handleRemoveProductToCart = () => {
         const { product } = this.props;
-        this.props.RemoveProductToCart(product)
+        this.props.handleRemoveProductToCart(product)
     }
     handleChangeQuantity = (number) => {
         const { product } = this.props;
-        if (number === 1) {
-            this.props.IncreaseQuantityProduct(product);
-        }
-        else if (number === -1) {
-            this.props.DecreaseQuantityProduct(product);
-        }
-    
-        this.setState({
-            product : this.props.product
-        })
-
+        this.props.handleChangeQuantity(product, number);
     }
     render() {
         const { product } = this.state;
@@ -55,16 +45,5 @@ class CartCard extends React.Component {
         )
     }
 }
-const mapStateToProps = (state) => {
-    return {
-        carts: state.carts
-    }
-}
-const mapDispatchToProps = (dispatch) => {
-    return {
-        RemoveProductToCart: (product) => dispatch({ type: 'REMOVE_TO_CART', payload: product }),
-        IncreaseQuantityProduct: (product) => dispatch({ type: 'INCREASE_QUANTITY_PRODUCT', payload: product }),
-        DecreaseQuantityProduct: (product) => dispatch({ type: 'DECREASE_QUANTITY_PRODUCT', payload: product })
-    }
-}
-export default connect(mapStateToProps, mapDispatchToProps)(CartCard);
+
+export default CartCard;

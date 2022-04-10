@@ -1,14 +1,23 @@
 import React from "react";
-import { connect } from "react-redux";
 import '../../styles/card.scss'
+import { connect } from "react-redux";
 
 class CartCheckout extends React.Component {
-    handleCheckOut = ()=>{
-        this.props.checkout();
+    handleCheckout = () => {
+        if (Object.keys(this.props.user).length === 0) {
+            const btnLogin = document.getElementById("btn-login");
+            btnLogin.click();
+        }
+        this.props.handleCheckout();
     }
+
     render() {
-        const { subTotal, itemNumber } = this.props;
-        const total = subTotal + 4.99;
+
+        let { subTotal, itemNumber, shipping } = this.props;
+        let total = subTotal + shipping;
+        subTotal = subTotal.toFixed(2);
+        shipping = shipping.toFixed(2);
+        total = total.toFixed(2);
         return (
             <div className="checkout-box">
                 <div className="checkout-box__container">
@@ -19,14 +28,14 @@ class CartCheckout extends React.Component {
                         </div>
                         <div className="checkout-box__detail-box">
                             <h1 className="checkout-box__detail-title">Shipping</h1>
-                            <h1 className="checkout-box__price">$4.99 <p className="checkout-box__price--unit">USD</p></h1>
+                            <h1 className="checkout-box__price">${shipping} <p className="checkout-box__price--unit">USD</p></h1>
                         </div>
                         <div className="checkout-box__detail-box">
                             <h1 className="checkout-box__detail-title">Bag Total</h1>
                             <h1 className="checkout-box__price"><p className="checkout-box__price--quantily">({itemNumber} items)</p> ${total} <p className="checkout-box__price--unit">USD</p></h1>
                         </div>
                     </div>
-                    <button onClick={()=>this.handleCheckOut()} className="checkout-box__btn">Proceed To Checkout</button>
+                    <button onClick={() => this.handleCheckout()} className="checkout-box__btn">Proceed To Checkout</button>
                 </div>
             </div>
         )
@@ -34,12 +43,9 @@ class CartCheckout extends React.Component {
 }
 const mapStateToProps = (state) => {
     return {
-        carts: state.carts
+        user: state.user
     }
 }
-const mapDispatchToProps = (dispatch) => {
-    return {
-        checkout: () => dispatch({ type: 'CHECKOUT' })
-    }
-}
-export default connect(mapStateToProps, mapDispatchToProps)(CartCheckout);
+
+export default connect(mapStateToProps)(CartCheckout);
+

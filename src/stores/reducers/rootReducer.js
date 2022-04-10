@@ -4,17 +4,21 @@ const initState = {
     ],
     user: {
 
+    },
+    infomation: {
+        fullName: '',
+        email: '',
+        phoneNumber: '',
+        address: ''
     }
 
 }
 
 const rootReducer = (state = initState, action) => {
 
-    let { carts } = state;
+    let { carts, user, infomation } = state;
     let payload = action.payload;
     let index;
-    console.log(">> Check action :", action);
-    console.log(">> Check state :", state);
     switch (action.type) {
         case 'ADD_TO_CART':
             let prevProduct = carts.filter((item) => item.id === payload.id);
@@ -43,6 +47,22 @@ const rootReducer = (state = initState, action) => {
         case 'CHECKOUT':
             carts = [];
             return { ...state, carts };
+        case 'LOGIN':
+            user = payload;
+
+            if (infomation.email === '') {
+                infomation.email = user.email;
+            }
+            if (infomation.fullName === '') {
+                infomation.fullName = user.name;
+            }
+            return { ...state, user, infomation }
+        case 'LOGOUT':
+            user = {}
+            return { ...state, user }
+        case 'SAVE_INFOMATION':
+            infomation = payload;
+            return { ...state, infomation }
         default:
             return state;
     }
