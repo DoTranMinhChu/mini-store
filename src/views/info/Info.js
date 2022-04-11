@@ -40,7 +40,7 @@ class Info extends React.Component {
                         <label className="form-items__name">Address<i className="form-items__require">*</i></label>
                         <input value={this.state.address} type="text" className="form-items__input" onChange={(event) => this.handleChangeFullName(event, 'address')} />
                     </div>
-                    <div className="form-items">
+                    <div className="form-items--center">
                         <button type="submit" className="form-items__button--save" >Save</button>
                     </div>
                 </form>

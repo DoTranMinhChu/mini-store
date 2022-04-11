@@ -1,7 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons'
-import '../../styles/card.scss'
 import { connect } from "react-redux";
 class ProductCard extends React.Component {
     state = {

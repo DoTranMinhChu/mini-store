@@ -1,5 +1,4 @@
 import React from "react";
-import '../../styles/card.scss'
 import { connect } from "react-redux";
 import { toast } from "react-toastify";
 

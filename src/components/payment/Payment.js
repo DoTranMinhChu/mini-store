@@ -1,6 +1,5 @@
 import React from "react";
 import qrcode from '../../assets/images/qrcode.png'
-import '../../styles/payment.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faMoneyCheckDollar, faIdCard, faCartShopping, faArrowLeft, faQrcode } from '@fortawesome/free-solid-svg-icons'
 import Countdown from 'react-countdown';

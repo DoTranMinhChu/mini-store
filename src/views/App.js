@@ -1,4 +1,4 @@
-import '../styles/global.scss'
+import '../styles/scss/global.scss'
 import NavigationHeader from '../components/navigation/NavigationHeader';
 import TaskBar from '../components/navigation/TaskBar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';

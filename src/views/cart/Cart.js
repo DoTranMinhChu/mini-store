@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import CartCard from "../../components/card/CartCard";
 import CartCheckout from "../../components/card/CartCheckout";
-import Payment from "../../components/peyment/Payment";
+import Payment from "../../components/payment/Payment";
 class Cart extends React.Component {
     state = {
         isPayment: false

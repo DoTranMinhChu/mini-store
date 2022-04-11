@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlusCircle, faMinusCircle, faRemove } from '@fortawesome/free-solid-svg-icons'
-import '../../styles/card.scss'
+
 
 class CartCard extends React.Component {
     state = {

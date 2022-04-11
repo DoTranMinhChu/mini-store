@@ -86,9 +86,9 @@ $color_shadow_nav: rgba(255, 255, 255, 0.286);
 .taskbar-box {
     background-color: $main_color_background;
     width: $width_task_bar;
-
     box-shadow: 4px 0 5px 5px $color_shadow_nav;
     top: 12vh;
+    left: 0;
     bottom: 0;
     position: fixed;
     z-index: 10;

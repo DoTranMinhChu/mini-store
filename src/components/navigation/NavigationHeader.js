@@ -1,6 +1,5 @@
 import React from "react";
 import { GoogleLogin, GoogleLogout } from "react-google-login";
-import '../../styles/navigation.scss';
 import { connect } from "react-redux";
 import googleAPI from "../../services/googleAPI"
 class NavigationHeader extends React.Component {
