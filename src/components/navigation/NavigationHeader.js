@@ -2,11 +2,12 @@ import React from "react";
 import { GoogleLogin, GoogleLogout } from "react-google-login";
 import '../../styles/navigation.scss';
 import { connect } from "react-redux";
+import googleAPI from "../../services/googleAPI"
 class NavigationHeader extends React.Component {
     responseGoogle = (response) => {
         if (response.profileObj) {
-            this.props.Login(response.profileObj)    
-        } 
+            this.props.Login(response.profileObj)
+        }
     }
     logout = () => {
         this.props.Logout();
@@ -21,7 +22,7 @@ class NavigationHeader extends React.Component {
                         <>
                             <div className="user-box__avatar-box circle"><img className="avatar img-responsive" src={this.props.user.imageUrl} alt=""></img></div>
                             <GoogleLogout
-                                clientId="343792692774-coeq5ll7469t3t7fk8hne2ldploqmpdb.apps.googleusercontent.com"
+                                clientId={googleAPI.getClineID()}
                                 buttonText="Logout"
                                 render={renderProps => (
                                     <button onClick={renderProps.onClick} id="btn-logout" className="user-box__button--login">Logout</button>
@@ -32,7 +33,7 @@ class NavigationHeader extends React.Component {
                         </> :
                         <>
                             <GoogleLogin
-                                clientId="343792692774-coeq5ll7469t3t7fk8hne2ldploqmpdb.apps.googleusercontent.com"
+                                clientId={googleAPI.getClineID()}
                                 render={renderProps => (
                                     <button onClick={renderProps.onClick} id="btn-login" className="user-box__button--login">Login</button>
                                 )}

@@ -58,9 +58,7 @@ class Cart extends React.Component {
                 handleChangeQuantity={this.handleChangeQuantity} />)
         })
         const total = subTotal + shipping;
-        const infomationShip = `Order value: ${total} $ | Address: ${this.props.infomation.address} | Phone Number: ${this.props.infomation.phoneNumber}  |Consignee: ${this.props.infomation.fullName}`;
-
-        console.log("Cart : ", this.props.carts)
+        const infomationShip = `Order value: ${total} $ | Address: ${this.props.infomation.address} | Phone Number: ${this.props.infomation.phoneNumber}  | Consignee: ${this.props.infomation.fullName}`;
         return (
             !this.props.carts.length ?
                 <>
