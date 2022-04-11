@@ -1,14 +1,19 @@
 {
     "web": {
-        "client_id": "343792692774-coeq5ll7469t3t7fk8hne2ldploqmpdb.apps.googleusercontent.com",
-        "project_id": "ministore-346604",
+        "client_id": "1060186860750-guusnmh2o261apbfd08gpetuce89q6tc.apps.googleusercontent.com",
+        "project_id": "metal-moonlight-346909",
         "auth_uri": "https://accounts.google.com/o/oauth2/auth",
         "token_uri": "https://oauth2.googleapis.com/token",
         "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-        "client_secret": "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",
-        "javascript_origins": [
-            "http://localhost:3000",
+        "client_secret": "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",
+        "redirect_uris": [
             "https://dotranminhchu.github.io"
+        ],
+        "javascript_origins": [
+            "https://dotranminhchu.github.io",
+            "http://localhost:3000",
+            "http://localhost:3001"
         ]
     }
 }
+

@@ -18,8 +18,9 @@ function App() {
         <Body>
           <Routes>
             <Route path="/" element={<Home />}></Route>
-            <Route path="cart" element={<Cart />}></Route>
-            <Route path="info" element={<Info />}></Route>
+            <Route path="/mini-store" element={<Home />}></Route>
+            <Route path="mini-store/cart" element={<Cart />}></Route>
+            <Route path="mini-store/info" element={<Info />}></Route>
           </Routes>
         </Body>
         <ToastContainer

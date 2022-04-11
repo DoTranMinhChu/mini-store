@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import googleAPI from "../../services/googleAPI"
 class NavigationHeader extends React.Component {
     responseGoogle = (response) => {
+        console.log(response);
         if (response.profileObj) {
             this.props.Login(response.profileObj)
         }

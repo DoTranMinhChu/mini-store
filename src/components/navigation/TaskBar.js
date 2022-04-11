@@ -9,18 +9,18 @@ class TaskBar extends React.Component {
             <nav className="taskbar-box">
                 <div className="taskbar-box__container">
 
-                    <NavLink to="/" className={(navData) => "task-bar-item " + (navData.isActive ? "task-bar-item--active" : "")} >
+                    <NavLink to="mini-store" className={(navData) => "task-bar-item " + (navData.isActive ? "task-bar-item--active" : "")} >
                         <FontAwesomeIcon className="task-bar-item__icon" icon={faHome} />
                         <h1 className="task-bar-item__title">Home</h1>
                     </NavLink>
 
 
-                    <NavLink to="cart" className={(navData) => "task-bar-item " + (navData.isActive ? "task-bar-item--active" : "")} >
+                    <NavLink to="mini-store/cart" className={(navData) => "task-bar-item " + (navData.isActive ? "task-bar-item--active" : "")} >
                         <FontAwesomeIcon className="task-bar-item__icon" icon={faCartShopping} />
                         <h1 className="task-bar-item__title">Cart</h1>
                     </NavLink>
 
-                    <NavLink to="info" id="nav-Info" className={(navData) => "task-bar-item " + (navData.isActive ? "task-bar-item--active" : "")} >
+                    <NavLink to="mini-store/info" id="nav-Info" className={(navData) => "task-bar-item " + (navData.isActive ? "task-bar-item--active" : "")} >
                         <FontAwesomeIcon className="task-bar-item__icon" icon={faUser} />
                         <h1 className="task-bar-item__title">Infomation</h1>
                     </NavLink>
