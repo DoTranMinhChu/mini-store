@@ -3,15 +3,13 @@ import { GoogleLogin, GoogleLogout } from "react-google-login";
 import '../../styles/navigation.scss';
 import { connect } from "react-redux";
 class NavigationHeader extends React.Component {
-
     responseGoogle = (response) => {
         if (response.profileObj) {
-            this.props.Login(response.profileObj)
-        }
-
+            this.props.Login(response.profileObj)    
+        } 
     }
     logout = () => {
-        this.props.Logout()
+        this.props.Logout();
     }
     render() {
         return (<>

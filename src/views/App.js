@@ -6,8 +6,10 @@ import Body from '../components/body/Body';
 import Home from './home/Home';
 import Cart from './cart/Cart';
 import Info from './info/Info';
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
+
   return (
     <>
       <BrowserRouter>
@@ -15,12 +17,23 @@ function App() {
         <TaskBar />
         <Body>
           <Routes>
-            <Route path="/" element={<Home/>}></Route>
-            <Route path="cart" element={<Cart/>}></Route>
-            <Route path="info" element={<Info/>}></Route>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="cart" element={<Cart />}></Route>
+            <Route path="info" element={<Info />}></Route>
           </Routes>
         </Body>
-
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
+        <ToastContainer />
       </BrowserRouter>
     </>
 

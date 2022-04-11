@@ -20,7 +20,7 @@ class TaskBar extends React.Component {
                         <h1 className="task-bar-item__title">Cart</h1>
                     </NavLink>
 
-                    <NavLink to="info" className={(navData) => "task-bar-item " + (navData.isActive ? "task-bar-item--active" : "")} >
+                    <NavLink to="info" id="nav-Info" className={(navData) => "task-bar-item " + (navData.isActive ? "task-bar-item--active" : "")} >
                         <FontAwesomeIcon className="task-bar-item__icon" icon={faUser} />
                         <h1 className="task-bar-item__title">Infomation</h1>
                     </NavLink>

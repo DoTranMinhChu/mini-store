@@ -9,18 +9,21 @@ class Info extends React.Component {
         address: this.props.infomation.address
     }
     handleChangeFullName = (event, stateProperty) => {
-        this.setState({
-            [stateProperty]: event.target.value
-        })
+        if (stateProperty) {
+            this.setState({
+                [stateProperty]: event.target.value
+            })
+        }
     }
-    handleSaveInfomation = () => {
+    handleSaveInfomation = (event) => {
+        event.preventDefault();
         this.props.SaveInfomation(this.state)
-
     }
     render() {
+        console.log(">> Check state : ", this.state)
         return (
             <>
-                <form className="form">
+                <form className="form" onSubmit={this.handleSaveInfomation}>
                     <div className="form-items">
                         <label className="form-items__name">Full Name<i className="form-items__require">*</i></label>
                         <input value={this.state.fullName} type="text" className="form-items__input" onChange={(event) => this.handleChangeFullName(event, 'fullName')} />
@@ -38,7 +41,7 @@ class Info extends React.Component {
                         <input value={this.state.address} type="text" className="form-items__input" onChange={(event) => this.handleChangeFullName(event, 'address')} />
                     </div>
                     <div className="form-items">
-                        <button type="button" className="form-items__button--save" onClick={() => this.handleSaveInfomation()}>Save</button>
+                        <button type="submit" className="form-items__button--save" >Save</button>
                     </div>
                 </form>
 

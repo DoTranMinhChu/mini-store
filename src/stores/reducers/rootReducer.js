@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 const initState = {
     carts: [
 
@@ -6,10 +7,6 @@ const initState = {
 
     },
     infomation: {
-        fullName: '',
-        email: '',
-        phoneNumber: '',
-        address: ''
     }
 
 }
@@ -29,10 +26,12 @@ const rootReducer = (state = initState, action) => {
                 payload.quantity = 1;
                 carts = [...carts, payload]
             }
+            toast.success("Successfully added product from cart");
             return { ...state, carts };
         case 'REMOVE_TO_CART':
             carts = carts.filter((item) => item.id !== payload.id)
-            return { ...state, carts };
+            toast.success("Successfully removed product from cart");
+            return { ...state, carts };        
         case 'INCREASE_QUANTITY_PRODUCT':
             index = carts.findIndex((item) => item.id === payload.id);
             carts[index].quantity = carts[index].quantity + 1;
@@ -42,26 +41,31 @@ const rootReducer = (state = initState, action) => {
             carts[index].quantity = carts[index].quantity - 1;
             if (carts[index].quantity === 0) {
                 carts = carts.filter((item) => item.id !== payload.id)
+                toast.success("The product has been removed from the cart");
             }
             return { ...state, carts };
         case 'CHECKOUT':
             carts = [];
+            toast.success("Successfully checkout");
             return { ...state, carts };
         case 'LOGIN':
             user = payload;
-
-            if (infomation.email === '') {
+            if (!infomation.email) {
                 infomation.email = user.email;
             }
-            if (infomation.fullName === '') {
+            if (!infomation.fullName) {
                 infomation.fullName = user.name;
             }
+            toast.success("Successful login");
             return { ...state, user, infomation }
         case 'LOGOUT':
             user = {}
-            return { ...state, user }
+            infomation = {}
+            toast.success("Successful logout");
+            return { ...state,infomation, user }
         case 'SAVE_INFOMATION':
             infomation = payload;
+            toast.success("Successfully save information");
             return { ...state, infomation }
         default:
             return state;
