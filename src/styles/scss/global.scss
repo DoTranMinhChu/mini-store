@@ -97,7 +97,13 @@ body {
     height: 100%;
     object-fit: cover;
 }
-
+.notification{
+    margin: 24px 2px;
+    text-align: center;
+    font-size: 4em;
+    font-weight: 800;
+    color: red;
+}
 .list-product {
     display: flex;
     align-items: center;
@@ -706,7 +712,7 @@ body {
     $width_task_bar: 130px;
 
     body {
-        font-size: 5px;
+        font-size: 8px;
     }
 
     .container {
@@ -771,22 +777,22 @@ body {
 
     //===== Card
     .card-product {
-        height: 200px;
-        width: 110px;
-        margin: 6px 2px;
+        height: 260px;
+        width: 130px;
+        margin: 4px 2px;
 
         &__image-box {
-            height: 110px;
+            height: 125px;
         }
 
         &__infomation-box {
-            padding: 2px 3px;
-            height: calc(200px - 110px);
+            padding: 2px 2px;
+            height: calc(260px - 130px);
         }
 
         &__cart-buy {
-            width: 30px;
-            height: 30px;
+            width: 28px;
+            height: 28px;
         }
     }
 
@@ -876,15 +882,15 @@ body {
     $width_task_bar: 130px;
 
     body {
-        font-size: 5px;
+        font-size: 9px;
     }
 
     .container {
         margin-top: $height_nav_header;
-        padding: 6px;
-        margin-left: 8px;
-        margin-right: 8px;
-        width: calc(100vw - 2*8px);
+        padding: 2px;
+        margin-left: 2px;
+        margin-right: 2px;
+        width: calc(100vw - 2*2px);
     }
 
     //======Navigation
@@ -898,7 +904,6 @@ body {
 
 
             &__avatar-box {
-
                 width: 30px;
                 height: 30px;
                 margin: 10px 2px;
@@ -940,22 +945,22 @@ body {
 
     //===== Card
     .card-product {
-        height: 230px;
-        width: 130px;
+        height: 300px;
+        width: 155px;
         margin: 6px 2px;
 
         &__image-box {
-            height: 130px;
+            height: 155px;
         }
 
         &__infomation-box {
-            padding: 6px 8px;
-            height: calc(230px - 130px);
+            padding: 2px 4px;
+            height: calc(300px - 155px);
         }
 
         &__cart-buy {
-            width: 34px;
-            height: 34px;
+            width: 30px;
+            height: 30px;
         }
     }
 
@@ -1046,15 +1051,15 @@ body {
     $width_task_bar: 130px;
 
     body {
-        font-size: 6px;
+        font-size: 10px;
     }
 
     .container {
         margin-top: $height_nav_header;
-        padding: 12px;
-        margin-left: 14px;
-        margin-right: 14px;
-        width: calc(100vw - 2*14px);
+        padding: 4px;
+        margin-left: 3px;
+        margin-right: 3px;
+        width: calc(100vw - 2*3px);
     }
 
     //======Navigation
@@ -1108,8 +1113,8 @@ body {
 
     //===== Card
     .card-product {
-        height: 270px;
-        width: 150px;
+        height: 320px;
+        width: 170px;
         margin: 10px 4px;
 
         &__image-box {
@@ -1117,8 +1122,8 @@ body {
         }
 
         &__infomation-box {
-            padding: 16px 18px;
-            height: calc(270px - 150px);
+            padding: 10px;
+            height: calc(340px - 170px);
         }
 
         &__cart-buy {
@@ -1213,7 +1218,7 @@ body {
     $width_task_bar: 150px;
 
     body {
-        font-size: 7px;
+        font-size: 10px;
     }
 
     .container {
@@ -1375,15 +1380,15 @@ body {
 //=====================================responsive 768 - 991 ==============
 @include responsive_768 {
     $height_nav_header: 70px;
-    $width_task_bar: 130px;
+    $width_task_bar: 140px;
 
     body {
-        font-size: 8px;
+        font-size: 11px;
     }
 
     .container {
         margin-top: $height_nav_header;
-        padding: 20px;
+        padding: 10px;
         margin-left: $width_task_bar;
         margin-right: $width_task_bar;
         width: calc(100vw - 2*$width_task_bar);
@@ -1436,19 +1441,19 @@ body {
 
     //===== Card
     .card-product {
-        height: 360px;
+        height: 410px;
         width: 220px;
-        margin: 24px 4px;
+        margin: 16px 4px;
 
         &__image-box {
-            height: 200px;
+            height: 220px;
 
         }
 
         &__infomation-box {
 
             padding: 16px 18px;
-            height: calc(360px - 200px);
+            height: calc(410px - 220px);
         }
 
         &__cart-buy {

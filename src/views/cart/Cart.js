@@ -62,7 +62,7 @@ class Cart extends React.Component {
         return (
             !this.props.carts.length ?
                 <>
-                    <div>Cart is empty</div>
+                    <div className="notification">Cart is empty</div>
                 </>
                 :
                 <>
