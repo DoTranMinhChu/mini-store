@@ -723,6 +723,7 @@ body {
         height: $height_nav_header;
 
         .user-box {
+           
             padding-right: 0.5em;
             width: 200px;
 
@@ -1229,6 +1230,7 @@ body {
         height: $height_nav_header;
 
         .user-box {
+         
             padding-right: 1em;
             width: 180px;
 
@@ -1393,6 +1395,9 @@ body {
         height: $height_nav_header;
 
         .user-box {
+            &__icon{
+                display: none ;
+            }
             padding-right: 2em;
             width: 200px;
 
@@ -1555,6 +1560,9 @@ body {
         height: $height_nav_header;
 
         .user-box {
+            &__icon{
+                display: none ;
+            }
             padding-right: 2em;
             width: 230px;
 
@@ -1715,6 +1723,9 @@ body {
         height: $height_nav_header;
 
         .user-box {
+            &__icon{
+                display: none ;
+            }
             padding-right: 2em;
             width: 230px;
 
@@ -1876,6 +1887,9 @@ body {
         height: $height_nav_header;
 
         .user-box {
+            &__icon{
+                display: none ;
+            }
             padding-right: 2em;
             width: 230px;
 
