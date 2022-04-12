@@ -2,6 +2,9 @@ import React from "react";
 import { GoogleLogin, GoogleLogout } from "react-google-login";
 import { connect } from "react-redux";
 import googleAPI from "../../services/googleAPI"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+import changeClass from "../../styles/js/style";
 class NavigationHeader extends React.Component {
     responseGoogle = (response) => {
         console.log(response);
@@ -15,7 +18,9 @@ class NavigationHeader extends React.Component {
     render() {
         return (<>
             <nav className="navigation-box">
-                <div className="user-box"></div>
+                <div className="user-box">
+                    <FontAwesomeIcon id="toggle-taskbar" className="user-box__icon" icon={faBars} onClick={() => changeClass('taskbar','show')} />
+                </div>
                 <div className="logo-box"><a href="/" className="logo-box__logo">MiniStore</a></div>
                 <div className="user-box">
                     {Object.keys(this.props.user).length !== 0 ?

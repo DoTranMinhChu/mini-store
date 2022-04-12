@@ -70,9 +70,9 @@ $main_color_background : rgb(241, 240, 241);
 $color_shadow_nav: rgba(255, 255, 255, 0.286);
 $background-image: linear-gradient(45deg, rgb(241, 240, 241) 0%, rgb(247, 245, 245) 100%);
 $color_shadow_card: rgba(154, 154, 154, 0.44);
-
+$from : 0px ;
+$to : 0px;
 //======= public ==========
-
 
 * {
     margin: 0;
@@ -83,7 +83,7 @@ $color_shadow_card: rgba(154, 154, 154, 0.44);
 
 body {
 
-    font-family: cursive;
+    font-family: cursive, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-image: $background-image;
 }
 
@@ -104,7 +104,6 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
 }
-
 
 
 .pagination {
@@ -249,6 +248,14 @@ body {
     }
 
     .user-box {
+        &__icon {
+            font-size: 5em;
+        }
+
+        &__icon:hover {
+            color: $main_light_color;
+            transform: scale(1.1);
+        }
 
         display: flex;
         justify-content: center;
@@ -284,14 +291,12 @@ body {
 
 .taskbar-box {
     background-color: $main_color_background;
-
     box-shadow: 4px 0 5px 5px $color_shadow_nav;
-
-
     bottom: 0;
     position: fixed;
     z-index: 10;
     font-size: 1.4em;
+
 
     &__container {
         display: flex;
@@ -743,8 +748,12 @@ body {
     .taskbar-box {
         width: $width_task_bar;
         top: $height_nav_header;
-
         left: -$width_task_bar;
+        transition: left 0.8s ;
+        &.show {        
+           left: 0 !important;
+        }
+
 
         &__container {
             padding: 10px;
@@ -910,6 +919,10 @@ body {
         top: $height_nav_header;
 
         left: -$width_task_bar;
+        transition: left 0.8s ;
+        &.show {        
+           left: 0 !important;
+        }
 
         &__container {
             padding: 10px;
@@ -1075,6 +1088,10 @@ body {
         width: $width_task_bar;
         top: $height_nav_header;
         left: -$width_task_bar;
+        transition: left 0.8s ;
+        &.show {        
+           left: 0 !important;
+        }
 
         &__container {
             padding: 10px;
@@ -1192,7 +1209,7 @@ body {
 //=====================================responsive 425 - 767 ==============
 @include responsive_425 {
     $height_nav_header: 70px;
-    $width_task_bar: 130px;
+    $width_task_bar: 150px;
 
     body {
         font-size: 7px;
@@ -1231,14 +1248,18 @@ body {
 
         }
     }
-
+    
     //======End Navigation
     //===TaskBar
     .taskbar-box {
         width: $width_task_bar;
         top: $height_nav_header;
         left: -$width_task_bar;
-
+        transition: left 0.8s ;
+        &.show {        
+           left: 0 !important;
+        }
+     
         &__container {
             padding: 10px;
 
@@ -1993,3 +2014,5 @@ body {
     //====End payment
 
 }
+
+
