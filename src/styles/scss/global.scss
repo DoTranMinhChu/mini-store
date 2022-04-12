@@ -5,6 +5,7 @@
 // max-width: 768px (máy tính bảng loại to, hiển thị chiều dọc)
 // max-width: 1024px (máy tính bảng loại to, hiển thị chiều ngang)
 // min-width: 1025px (từ size này trở lên là danh cho desktop thông thường).
+$res_l_320 : "only screen and (max-width: 319px)";
 $res_320 : "only screen and (min-width: 320px) and (max-width: 374px)";
 $res_375 : "only screen and (min-width: 375px) and (max-width: 424px)";
 $res_425 : "only screen and (min-width: 425px) and (max-width: 767px)";
@@ -12,6 +13,12 @@ $res_768 : "only screen and (min-width: 768px) and (max-width: 991px)";
 $res_992 : "only screen and (min-width: 992px) and (max-width: 1023px)";
 $res_1024 : "only screen and (min-width: 1024px) and (max-width: 1999px)";
 $res_1200 : "only screen and (min-width: 1200px)";
+
+@mixin responsive_l_320() {
+    @media #{$res_l_320} {
+        @content;
+    }
+}
 
 @mixin responsive_320() {
     @media #{$res_320} {
@@ -574,7 +581,6 @@ body {
 
 
     &-box {
-
         display: flex;
     }
 
@@ -674,6 +680,7 @@ body {
 
 
             &__intruction {
+                text-align: center;
                 font-size: x-large;
                 margin: 12px;
             }
@@ -688,6 +695,171 @@ body {
 }
 
 //=========Repsonsive
+//=====================================responsive let than  320 ==============
+@include responsive_l_320 {
+    $height_nav_header: 40px;
+    $width_task_bar: 130px;
+
+    body {
+        font-size: 5px;
+    }
+
+    .container {
+        margin-top: $height_nav_header;
+        padding: 2px;
+        margin-left: 2px;
+        margin-right: 2px;
+        width: calc(100vw - 2*2px);
+    }
+
+    //======Navigation
+
+    .navigation-box {
+        height: $height_nav_header;
+
+        .user-box {
+            padding-right: 0.5em;
+            width: 200px;
+
+
+            &__avatar-box {
+
+                width: 25px;
+                height: 25px;
+                margin: 10px 2px;
+            }
+
+            &__button--login {
+                width: 50px;
+                height: 25px;
+            }
+
+
+        }
+    }
+
+    //======End Navigation
+    //===TaskBar
+    .taskbar-box {
+        width: $width_task_bar;
+        top: $height_nav_header;
+
+        left: -$width_task_bar;
+
+        &__container {
+            padding: 10px;
+
+            .task-bar-item {
+                width: 80px;
+                height: 80px;
+                border-radius: 20px;
+            }
+        }
+    }
+
+    //======End TaskBar
+
+    //===== Card
+    .card-product {
+        height: 200px;
+        width: 110px;
+        margin: 6px 2px;
+
+        &__image-box {
+            height: 110px;
+        }
+
+        &__infomation-box {
+            padding: 2px 3px;
+            height: calc(200px - 110px);
+        }
+
+        &__cart-buy {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    .cart-card {
+        padding: 2px;
+
+        &__btn-remove {
+            right: 25px;
+            top: 25px;
+        }
+
+        &__image-box {
+            margin: 4px;
+            width: 100px;
+            height: 100px;
+        }
+
+        &__infomation-box {
+            width: calc(100% - 100px);
+        }
+    }
+
+    .cart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &__cart-list,
+        &__checkout {
+            width: 100%;
+        }
+
+    }
+
+    //===== End Card
+    //======Payment
+
+
+    .payment {
+        padding: 10px;
+
+        &-box {
+
+            flex-direction: column-reverse;
+            width: 100%;
+            height: 100%;
+        }
+
+        &-infomation {
+            padding: 4px 4px;
+            width: 100%;
+            height: 30%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &__item {
+            padding: 6px 2px;
+        }
+
+        &-main {
+            padding: 2px;
+            width: 100%;
+            height: 70%;
+
+            .payment-container {
+                padding: 10px;
+                width: 100%;
+                height: 80%;
+
+                &__qr {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+        }
+    }
+
+    //====End payment
+}
+
 //=====================================responsive 320 - 374 ==============
 @include responsive_320 {
     $height_nav_header: 50px;
@@ -810,34 +982,41 @@ body {
 
 
     .payment {
-        padding: 80px;
+        padding: 10px;
 
         &-box {
+
+            flex-direction: column-reverse;
             width: 100%;
             height: 100%;
         }
 
         &-infomation {
-            padding: 36px 18px;
-            width: 30%;
-            height: 100%;
+            padding: 4px 4px;
+            width: 100%;
+            height: 40%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
 
         &__item {
-            padding: 16px 8px;
+            padding: 6px 2px;
         }
 
         &-main {
-            padding: 16px;
-            width: 70%;
-            height: 100%;
+            padding: 2px;
+            width: 100%;
+            height: 60%;
 
             .payment-container {
-                padding: 18px;
+                padding: 10px;
+                width: 100%;
+                height: 80%;
 
                 &__qr {
-                    width: 300px;
-                    height: 300px;
+                    width: 150px;
+                    height: 150px;
                 }
             }
         }
@@ -967,41 +1146,47 @@ body {
 
 
     .payment {
-        padding: 80px;
+        padding: 10px;
 
         &-box {
+
+            flex-direction: column-reverse;
             width: 100%;
             height: 100%;
         }
 
         &-infomation {
-            padding: 36px 18px;
-            width: 30%;
-            height: 100%;
+            padding: 4px 4px;
+            width: 100%;
+            height: 40%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
 
         &__item {
-            padding: 16px 8px;
+            padding: 6px 2px;
         }
 
         &-main {
-            padding: 16px;
-            width: 70%;
-            height: 100%;
+            padding: 2px;
+            width: 100%;
+            height: 60%;
 
             .payment-container {
-                padding: 18px;
+                padding: 10px;
+                width: 100%;
+                height: 80%;
 
                 &__qr {
-                    width: 300px;
-                    height: 300px;
+                    width: 150px;
+                    height: 150px;
                 }
             }
         }
     }
 
     //====End payment
-
 }
 
 //=====================================responsive 425 - 767 ==============
@@ -1125,7 +1310,7 @@ body {
 
 
     .payment {
-        padding: 80px;
+        padding: 10px;
 
         &-box {
             width: 100%;
@@ -1133,26 +1318,28 @@ body {
         }
 
         &-infomation {
-            padding: 36px 18px;
-            width: 30%;
+            padding: 12px 10px;
+            width: 40%;
             height: 100%;
         }
 
         &__item {
-            padding: 16px 8px;
+            padding: 6px 2px;
         }
 
         &-main {
-            padding: 16px;
-            width: 70%;
+            padding: 6px;
+            width: 60%;
             height: 100%;
 
             .payment-container {
                 padding: 18px;
+                width: 100%;
+                height: 80%;
 
                 &__qr {
-                    width: 300px;
-                    height: 300px;
+                    width: 240px;
+                    height: 240px;
                 }
             }
         }
@@ -1283,7 +1470,7 @@ body {
 
 
     .payment {
-        padding: 80px;
+        padding: 40px;
 
         &-box {
             width: 100%;
@@ -1307,6 +1494,8 @@ body {
 
             .payment-container {
                 padding: 18px;
+                width: 100%;
+                height: 80%;
 
                 &__qr {
                     width: 300px;
@@ -1443,7 +1632,7 @@ body {
 
 
     .payment {
-        padding: 80px;
+        padding: 50px;
 
         &-box {
             width: 100%;
@@ -1467,10 +1656,12 @@ body {
 
             .payment-container {
                 padding: 18px;
+                width: 100%;
+                height: 80%;
 
                 &__qr {
-                    width: 300px;
-                    height: 300px;
+                    width: auto;
+                    height: 60%;
                 }
             }
         }
@@ -1601,7 +1792,7 @@ body {
 
 
     .payment {
-        padding: 80px;
+        padding: 50px;
 
         &-box {
             width: 100%;
@@ -1625,10 +1816,12 @@ body {
 
             .payment-container {
                 padding: 18px;
+                width: 100%;
+                height: 80%;
 
                 &__qr {
-                    width: 300px;
-                    height: 300px;
+                    width: auto;
+                    height: 60%;
                 }
             }
         }
@@ -1761,9 +1954,8 @@ body {
     //===== End Card
     //======Payment
 
-
     .payment {
-        padding: 80px;
+        padding: 60px;
 
         &-box {
             width: 100%;
@@ -1787,20 +1979,17 @@ body {
 
             .payment-container {
                 padding: 18px;
+                width: 100%;
+                height: 80%;
 
                 &__qr {
-                    width: 300px;
-                    height: 300px;
+                    width: auto;
+                    height: 60%;
                 }
             }
         }
     }
 
     //====End payment
-
-}
-
-.container {
-    border: 1px solid red;
 
 }
